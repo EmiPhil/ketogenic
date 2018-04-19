@@ -1,0 +1,53 @@
+{
+  "name": "ketogenic",
+  "version": "1.0.0",
+  "description": "Slim down on express-based apis",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src && echo 'Lint complete.'",
+    "cov": "nyc report --reporter=lcov && echo 'Cov complete.'",
+    "test": "ava",
+    "test:cov": "nyc npm run test && npm run cov",
+    "test:suite": "npm run test:cov && npm run lint",
+    "watch": "watch 'clear && npm run test:suite' src",
+    "start": "npm run watch",
+    "verify": "npm run -s test && npm run -s lint",
+    "precommit": "npm run verify",
+    "preversion": "npm run test:suite",
+    "version": "git add -A",
+    "postversion": "git push && git push --tags"
+  },
+  "ava": {
+    "files": [
+      "src/**/*.test.js"
+    ],
+    "concurrency": 20
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmiPhil/ketogenic.git"
+  },
+  "keywords": [],
+  "author": "EmiPhil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EmiPhil/ketogenic/issues"
+  },
+  "homepage": "https://github.com/EmiPhil/ketogenic#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "ava": "1.0.0-beta.4",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "nyc": "^11.7.1",
+    "standard": "^11.0.1",
+    "watch": "^1.0.2"
+  }
+}
