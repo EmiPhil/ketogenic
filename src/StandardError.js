@@ -14,8 +14,6 @@
 // * Class function initially taken from:
 // @ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#Custom_Error_Types
 
-const { inspect } = require('util')
-
 class StandardError extends Error {
   constructor (status = 500, trace = {}, ...params) {
     // * Pass remaining arguments (including vendor specific ones) to parent
