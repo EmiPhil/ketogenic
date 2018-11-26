@@ -34,19 +34,17 @@
     "url": "https://github.com/EmiPhil/ketogenic/issues"
   },
   "homepage": "https://github.com/EmiPhil/ketogenic#readme",
-  "dependencies": {
-    "express": "^4.16.3",
-    "lodash": "^4.17.5"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "ava": "1.0.0-beta.4",
+    "ava": "^1.0.0-rc.2",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
-    "nyc": "^11.7.1",
+    "express": "^4.16.4",
+    "nyc": "^13.1.0",
     "standard": "^11.0.1",
     "watch": "^1.0.2"
   }
